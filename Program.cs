@@ -1,11 +1,12 @@
-﻿//Задача 13: Напишите программу, которая выводит третью цифру (справа налево) заданного числа или сообщает, что третьей цифры нет.
+﻿//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 //
 //
 //entering block/////////////а
-int intN1, intResult; 
+int intN1;
+string strResult = "нет";
 //
 Console.Clear();
-Console.Write("Введите число ");
+Console.Write("Введите одну цифру ");
 intN1 = int.Parse(Console.ReadLine()!);
 //
 // end of entering block/////////////
@@ -13,13 +14,10 @@ intN1 = int.Parse(Console.ReadLine()!);
 //
 //exec block
 //
-if (intN1>=100)
+if (intN1 == 6 ^ intN1 == 7) 
 {
-    intResult = intN1 % 10;
-    Console.WriteLine($"{intResult}");
-}else
-{
-Console.WriteLine($"Нет 3-й цифры");
+    strResult = "да";
 }
+Console.WriteLine($"{strResult}");
 //
 // end of exec block
